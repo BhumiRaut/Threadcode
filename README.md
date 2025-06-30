@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class SimpleChat {
 
-    // Shared variable to store the last message
+    
     private static String lastMessage = "";
     private static boolean running = true;
 
@@ -18,7 +18,6 @@ public class SimpleChat {
         botThread.start();
     }
 
-    // Thread that takes user input
     static class UserInput implements Runnable {
         Scanner scanner = new Scanner(System.in);
 
@@ -35,7 +34,7 @@ public class SimpleChat {
         }
     }
 
-    // Thread that responds to user input
+
     static class ChatBot implements Runnable {
         public void run() {
             String previousMessage = "";
@@ -63,7 +62,7 @@ public class SimpleChat {
                     }
                 }
 
-                // Small pause to avoid CPU overuse
+    
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
