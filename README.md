@@ -10,7 +10,7 @@ public class SimpleChat {
     private static boolean running = true;
 
     public static void main(String[] args) {
-        // Start both threads
+    
         Thread userThread = new Thread(new UserInput());
         Thread botThread = new Thread(new ChatBot());
 
@@ -40,10 +40,10 @@ public class SimpleChat {
             String previousMessage = "";
             while (running) {
                 if (!lastMessage.equals(previousMessage)) {
-                    // New message detected
+                    
                     previousMessage = lastMessage;
 
-                    // Simulate thinking delay
+                    
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
